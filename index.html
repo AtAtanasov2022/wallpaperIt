@@ -32,12 +32,14 @@
 
         #saleBanner {
             width: 100%;
+            height: 1rem;
             text-align: center;
             padding: 0.625rem;
             position: relative;
             background-color: var(--pale-teal);
             color: var(--black);
             font-family: var(--text-style-2);
+            letter-spacing: 0.01rem;
         }
 
         #closeBtn {
@@ -54,6 +56,48 @@
             font-weight: bold;
             color: var(--black);
         }
+
+        .topBanner {
+            display: flex;
+        }
+
+        .searchAndNav {
+            padding: 2rem;
+        }
+
+        .logo,
+        .searchBar,
+        .iconWrapper {
+            flex: 1;
+        }
+
+        .searchBar form {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .searchBar input[type="search"] {
+            height: 3rem;
+            border: var(--pale-teal) solid;
+            border-radius: 20px;
+            padding: 0 40px 0 10px;
+            flex: 1;
+        }
+
+        .searchBar img {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            transform: translateX(36.8rem);
+            cursor: pointer;
+            height: 20px;
+        }
+
+        .iconWrapper {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
@@ -68,13 +112,35 @@
         <div class="searchAndNav">
             <div class="topBanner">
                 <div class="logo">
-
+                    <a href="#">
+                        <img src="wallpaperit-logo.png" alt="image">
+                    </a>
                 </div>
                 <div class="searchBar">
-
+                    <form>
+                        <input type="search" placeholder="Search for products...">
+                        <img src="magnifying-glass.jpg" alt="magnifying glass">
+                    </form>
                 </div>
                 <div class="iconWrapper">
-
+                    <div>
+                        <a href="#">
+                            <img src="avatar.jpg" alt="avatar">
+                            <span>Sign in</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="heart.jpg" alt="heart">
+                            <span>Wishlist</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="shopping-bag.jpg" alt="shopping bag">
+                            <span>Bag</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="navBar">
