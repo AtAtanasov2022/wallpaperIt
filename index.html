@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallpaper it</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        :root {
+            --secondary: #066A76;
+            --pale-teal: #7FC6AC;
+            --grey: #EBE3E9;
+            --black: #161615;
+            --text-style-3: "DMSerifDisplay", Regular, 40px;
+            --text-style-3-letter-spacing: 0.8px;
+            --text-style-2: "Avenir-Book", Regular, 18px;
+            --text-style-2-letter-spacing: 0.4px;
+            --text-style-1: "Avenir-Book", Regular, 30px;
+            --text-style: "DMSerifDisplay", Regular, 20px;
+            --text-style-letter-spacing: 0.6px;
+        }
+
+        #saleBanner {
+            width: 100%;
+            text-align: center;
+            padding: 0.625rem;
+            position: relative;
+            background-color: var(--pale-teal);
+            color: var(--black);
+            font-family: var(--text-style-2);
+        }
+
+        #closeBtn {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--black);
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         <!-- NEW YEAR SALE! 20% OFF SELECTED WALLPAPERS! -->
-        <div><a href="">New Year Sale! 20% Off Selected Wallpapers!</a></div>
+        <div id="saleBanner">
+            <a class="link" href="">New Year Sale! 20% Off Selected Wallpapers!</a>
+            <span id="closeBtn" onclick="closeBanner()">X</span>
+        </div>
         <!-- SEARCH BAR -->
+        <div class="searchAndNav">
+            <div class="topBanner">
+                <div class="logo">
+
+                </div>
+                <div class="searchBar">
+
+                </div>
+                <div class="iconWrapper">
+
+                </div>
+            </div>
+            <div class="navBar">
+                <nav id="navigation" role="navigation">
+                    <ul></ul>
+                </nav>
+            </div>
+        </div>
     </div>
-    <div class="below-header-links">
+    <div class="belowHeaderLinks">
 
     </div>
     <div class="main">
-        
+
     </div>
+    <script>
+        function closeBanner() {
+            document.getElementById("saleBanner").style.display = "none";
+        }
+    </script>
 </body>
+
 </html>
