@@ -59,16 +59,11 @@
 
         .topBanner {
             display: flex;
+            justify-content: space-between;
         }
 
         .searchAndNav {
-            padding: 2rem;
-        }
-
-        .logo,
-        .searchBar,
-        .iconWrapper {
-            flex: 1;
+            padding: 1.8rem 1.5rem 1.8rem 1.5rem;
         }
 
         .searchBar form {
@@ -79,17 +74,17 @@
 
         .searchBar input[type="search"] {
             height: 3rem;
-            border: var(--pale-teal) solid;
-            border-radius: 20px;
+            border: var(--pale-teal) thin solid;
+            border-radius: 60px;
             padding: 0 40px 0 10px;
-            flex: 1;
+            width: 35rem;
         }
 
         .searchBar img {
             position: absolute;
             top: 30%;
             transform: translateY(-50%);
-            transform: translateX(36.8rem);
+            transform: translateX(32.8rem);
             cursor: pointer;
             height: 20px;
         }
@@ -97,6 +92,20 @@
         .iconWrapper {
             display: flex;
             justify-content: space-between;
+            width: 15rem;
+            margin-right: 25px;
+        }
+
+        .imgIconsContainers {
+            display: flex;
+            flex-direction: column;
+            max-width: 10rem;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .imgIcons {
+            height: 35px;
         }
     </style>
 </head>
@@ -124,20 +133,20 @@
                 </div>
                 <div class="iconWrapper">
                     <div>
-                        <a href="#">
-                            <img src="avatar.jpg" alt="avatar">
+                        <a class="imgIconsContainers" href="#">
+                            <img class="imgIcons" src="avatar2.png" alt="avatar">
                             <span>Sign in</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
-                            <img src="heart.jpg" alt="heart">
+                        <a class="imgIconsContainers" href="#">
+                            <img class="imgIcons" src="heart.png" alt="heart">
                             <span>Wishlist</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
-                            <img src="shopping-bag.jpg" alt="shopping bag">
+                        <a class="imgIconsContainers" href="#">
+                            <img class="imgIcons" src="shopping-bag.jpg" alt="shopping bag">
                             <span>Bag</span>
                         </a>
                     </div>
