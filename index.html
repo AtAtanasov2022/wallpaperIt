@@ -2,21 +2,15 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallpaper it</title>
     <style>
-        @font-face {
-            font-family: DMSerifDisplay;
-            src: url(./DMSerifDisplay-Regular.ttf) format("truetype");
-        }
-
-        @font-face {
-            font-family: AvenirBook;
-            src: url(./Avenir\ Book.ttf) format("truetype");
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -24,6 +18,8 @@
             font-size: 100%;
             font: inherit;
             vertical-align: baseline;
+            /* background-color: rgba(0, 0, 0, 0.05) !important;
+            outline: #000000 1px solid; */
         }
 
         :root {
@@ -31,10 +27,12 @@
             --pale-teal: #7FC6AC;
             --grey: #EBE3E9;
             --black: #161615;
+            --dark-green: #1D4435;
+            --text-style-4-letter-spacing: 3px;
             --text-style-3-letter-spacing: 0.8px;
             --text-style-2-letter-spacing: 0.4px;
-            --text-style-1: AvenirBook;
-            --text-style: DMSerifDisplay;
+            --text-style-1: 'Avenir', sans-serif;
+            --text-style: 'DM Serif Display', serif;
             --text-style-letter-spacing: 0.6px;
         }
 
@@ -42,7 +40,7 @@
             width: 100%;
             height: 1.5rem;
             text-align: center;
-            padding: 0.325rem;
+            padding: 0.325rem 0rem;
             position: relative;
             background-color: var(--pale-teal);
             color: var(--black);
@@ -134,6 +132,8 @@
             list-style: none;
             display: flex;
             font-family: var(--text-style-1);
+            font-weight: bold;
+            letter-spacing: var(--text-style-4-letter-spacing);
             justify-content: space-evenly;
             width: 100%;
         }
@@ -162,21 +162,20 @@
             transform: translateX(-2rem);
             background-color: #fff;
             width: 100%;
-            height: 40rem;
+            height: 30rem;
             z-index: 1;
-            margin-top: 0.2rem;
-
+            margin-top: 0.1rem;
         }
 
         .submenu ul {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
         }
 
         .submenu li {
-            width: 20%;
+            width: 10rem;
+            text-align: center;
         }
 
         .submenu a {
@@ -189,47 +188,112 @@
         .submenu a:hover {
             background-color: #ccc;
         }
+
+        .iconsText {
+            font-family: AvenirBook;
+            color: black;
+        }
+
+        .belowHeaderDiv {
+            width: 20%;
+            text-align: center;
+        }
+
+        .belowHeaderLinks {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4rem;
+        }
+
+        .leftImage {
+            background-image: url(./img/envy-homepage-banner-left-image.jpg);
+            width: 30%;
+            height: 34rem;
+        }
+
+        .rightImage {
+            background-image: url(./img/envy-homepage-banner-right-image.jpg);
+            width: 30%;
+            height: 34rem;
+        }
+
+        .sectionMainContent {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: var(--dark-green);
+        }
+
+        .buttonShopWallpaper {
+            background-color: #E4BE8C;
+            color: black;
+            display: inline-block;
+            font-family: AvenirBook;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: .078rem;
+            padding: 0.75rem 2.5rem;
+            text-transform: uppercase;
+            border-radius: 1.75rem;
+            -webkit-border-radius: 1.75rem;
+        }
+
+        /* #magnifyingGlass {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            height: 25px;
+            width: 30px;
+            transform: translateY(-50%);
+            border: none;
+            background: url(./img/wallpaperit_sprite.png) 100 100 no-repeat;
+            background-size: 155px;
+            background-position: 100px 100px;
+        } */
     </style>
 </head>
 
 <body>
     <header class="header">
-        <!-- NEW YEAR SALE! 20% OFF SELECTED WALLPAPERS! -->
         <div id="saleBanner">
             <a class="link" href="">New Year Sale! 20% Off Selected Wallpapers!</a>
             <span id="closeBtn" onclick="closeBanner()">X</span>
         </div>
-        <!-- SEARCH BAR -->
         <div class="searchAndNav">
             <div class="topBanner">
                 <div class="logo">
                     <a href="#">
-                        <img src="wallpaperit-logo.png" alt="image">
+                        <img src="./img/wallpaperit-logo.png" alt="image">
                     </a>
                 </div>
                 <div class="searchBar">
                     <form>
                         <input type="search" placeholder="Search for products...">
-                        <img src="magnifying-glass.jpg" alt="magnifying glass">
+                        <img src="./img/magnifying-glass.jpg" alt="magnifying glass">
+                        <!-- <i id="magnifyingGlass"></i> -->
                     </form>
                 </div>
                 <div class="iconWrapper">
                     <div>
                         <a class="imgIconsContainers" href="#">
-                            <img class="imgIcons" src="avatar2.png" alt="avatar">
-                            <span>Sign in</span>
+                            <img class="imgIcons" src="./img/avatar2.png" alt="avatar">
+                            <span class="iconsText">Sign in</span>
                         </a>
                     </div>
                     <div>
                         <a class="imgIconsContainers" href="#">
-                            <img class="imgIcons" src="heart.png" alt="heart">
-                            <span>Wishlist</span>
+                            <img class="imgIcons" src="./img/heart.png" alt="heart">
+                            <span class="iconsText">Wishlist</span>
                         </a>
                     </div>
                     <div>
                         <a class="imgIconsContainers" href="#">
-                            <img class="imgIcons" src="shopping-bag.jpg" alt="shopping bag">
-                            <span>Bag</span>
+                            <img class="imgIcons" src="./img/shopping-bag.jpg" alt="shopping bag">
+                            <span class="iconsText">Bag</span>
                         </a>
                     </div>
                 </div>
@@ -286,10 +350,47 @@
         </div>
     </header>
     <div class="belowHeaderLinks">
-
+        <div class="belowHeaderDiv">
+            <a href="#" class="belowHeaderLink1">
+                <span>
+                    <span class="tickIcon"></span>
+                    <span class="delivery-title">Free Delivery</span>
+                </span>
+                <span class="belowHeaderLink1NotBoldedSpan">On All Orders Over £50</span>
+            </a>
+        </div>
+        <div class="belowHeaderDiv">
+            <a href="#" class="belowHeaderLink1">
+                <span>
+                    <span class="tickIcon"></span>
+                    <span class="delivery-title">CustomersRate Us 4.7 / 5</span>
+                </span>
+            </a>
+        </div>
+        <div class="belowHeaderDiv">
+            <a href="#" class="belowHeaderLink1">
+                <span>
+                    <span class="tickIcon"></span>
+                    <span class="delivery-title">Order by 8pm</span>
+                </span>
+                <span class="belowHeaderLink1NotBoldedSpan">For Next Day Delivery</span>
+            </a>
+        </div>
     </div>
     <main class="main">
-
+        <section style="display: flex">
+            <div class="leftImage"></div>
+            </div>
+            <div class="sectionMainContent">
+                <img src="https://www.wallpaper-it.com/on/demandware.static/-/Library-Sites-Library-Wallpaper/default/dw7b653d08/svg/envy-homepage-banner-sinful-style.svg"
+                    alt="Discover your Sinful Style">
+                <a href="#" class="buttonShopWallpaper" aria-label="Shop Envy Wallpaper">Shop Wallpaper</a>
+                <span>
+                    <img src="" alt="Envy">
+                </span>
+            </div>
+            <div class="rightImage"></div>
+        </section>
     </main>
     <footer>
 
