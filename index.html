@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallpaper it</title>
     <style>
+        @font-face {
+            font-family: DMSerifDisplay;
+            src: url(./DMSerifDisplay-Regular.ttf) format("truetype");
+        }
+
+        @font-face {
+            font-family: AvenirBook;
+            src: url(./Avenir\ Book.ttf) format("truetype");
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -21,24 +31,22 @@
             --pale-teal: #7FC6AC;
             --grey: #EBE3E9;
             --black: #161615;
-            --text-style-3: "DMSerifDisplay", Regular, 40px;
             --text-style-3-letter-spacing: 0.8px;
-            --text-style-2: "Avenir-Book", Regular, 18px;
             --text-style-2-letter-spacing: 0.4px;
-            --text-style-1: "Avenir-Book", Regular, 30px;
-            --text-style: "DMSerifDisplay", Regular, 20px;
+            --text-style-1: AvenirBook;
+            --text-style: DMSerifDisplay;
             --text-style-letter-spacing: 0.6px;
         }
 
         #saleBanner {
             width: 100%;
-            height: 1rem;
+            height: 1.5rem;
             text-align: center;
-            padding: 0.625rem;
+            padding: 0.325rem;
             position: relative;
             background-color: var(--pale-teal);
             color: var(--black);
-            font-family: var(--text-style-2);
+            font-family: var(--text-style-1);
             letter-spacing: 0.01rem;
         }
 
