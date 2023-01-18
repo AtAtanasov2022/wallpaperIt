@@ -203,7 +203,7 @@ nav a:hover {
 .belowHeaderLinks {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 4rem;
 }
 
@@ -380,7 +380,8 @@ nav a:hover {
 
 #imageFour {
     grid-area: 2 / 3 / 3 / 5;
-    height: 205px;
+    height: 295px;
+    /* height: 205px;  for responsive*/
     width: 525px;
 }
 
@@ -398,6 +399,44 @@ nav a:hover {
 
 #imageEight {
     grid-area: 3 / 4 / 4 / 5;
+}
+
+footer {
+    width: 100%;
+    background-color: #212322;
+}
+
+table {
+    width: 80%;
+    color: white;
+    font-family: var(--text-style-1);
+}
+
+thead {
+    width: 100%;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+    display: flex;
+}
+
+thead th {
+    width: 25%;
+    text-align: start;
+    margin: 20px;
+    font-size: 24px;
+}
+
+tbody td {
+    width: 25%;
+    text-align: start;
+    margin: 10px 20px;
+    font-size: 16px;
 }
 
 /* #magnifyingGlass {
