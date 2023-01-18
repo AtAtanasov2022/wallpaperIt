@@ -63,20 +63,71 @@
                                 onmouseout="hideMenu('wallpaper')">
                                 <ul>
                                     <li>
-                                        <a href="#">Category 1</a>
-                                        <ul>
-                                            <li>Sub Category 1</li>
-                                            <li>Sub Category 2</li>
-                                            <li>Sub Category 3</li>
-                                            <li>Sub Category 4</li>
-                                            <li>Sub Category 5</li>
-                                            <li>Sub Category 6</li>
-                                            <li>Sub Category 7</li>
+                                        <a class="shopItemsCategories" href="#">Shop By Design</a>
+                                        <ul class="subShopItems">
+                                            <li>Animal</li>
+                                            <li>Bird</li>
+                                            <li>Brick</li>
+                                            <li>Damask</li>
+                                            <li>Fioral</li>
+                                            <li>Geometric</li>
+                                            <li>Leaves</li>
+                                            <li>Plain</li>
+                                            <li>Strype</li>
+                                            <li>Tile</li>
+                                            <li>Trail</li>
+                                            <li>Trees</li>
+                                            <li>Wood</li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Category 2</a></li>
-                                    <li><a href="#">Category 3</a></li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Color</a>
+                                        <ul class="subShopItems">
+                                            <li>Black</li>
+                                            <li>Blue</li>
+                                            <li>Brown</li>
+                                            <li>Cream</li>
+                                            <li>Glitter</li>
+                                            <li>Gold</li>
+                                            <li>Green</li>
+                                            <li>Gray</li>
+                                            <li>Metalic</li>
+                                            <li>Neutral</li>
+                                            <li>Pink</li>
+                                            <li>Purple</li>
+                                            <li>Red</li>
+                                            <li>Rose Gold</li>
+                                            <li>Silver</li>
+                                            <li>Teal</li>
+                                            <li>White</li>
+                                            <li>Yellow</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Room</a>
+                                        <ul class="subShopItems">
+                                            <li>Bathroom</li>
+                                            <li>Bedroom</li>
+                                            <li>Dining room</li>
+                                            <li>Hall</li>
+                                            <li>Kids</li>
+                                            <li>Kitchen</li>
+                                            <li>Living room</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Brand</a>
+                                        <ul class="subShopItems">
+                                            <li>Envy</li>
+                                            <li>Joules</li>
+                                            <li>Joules kids</li>
+                                            <li>Laura Ashley</li>
+                                            <li>Next</li>
+                                            <li>Superfresco Easy</li>
+                                        </ul>
+                                    </li>
                                 </ul>
+                                <img src="img/wpNavImage.png">
                             </div>
                         </li>
                         <li><a href="#" onmouseover="showMenu('paint')" onmouseout="hideMenu('paint')">PAINT</a>
@@ -288,7 +339,7 @@
 
         function showMenu(id) {
             var submenu = document.getElementById(id);
-            submenu.style.display = "block";
+            submenu.style.display = "flex";
         }
 
         function hideMenu(id) {

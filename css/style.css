@@ -171,12 +171,14 @@ nav a:hover {
 .submenu ul {
     list-style: none;
     display: flex;
+    justify-content:left;
     flex-wrap: wrap;
 }
 
 .submenu li {
     width: 10rem;
     text-align: center;
+    margin-left: 2rem;
 }
 
 .submenu a {
@@ -188,6 +190,22 @@ nav a:hover {
 
 .submenu a:hover {
     background-color: #ccc;
+}
+
+.submenu img {
+    height: 90%;
+}
+
+.shopItemsCategories {
+    width: 100%
+}
+
+.subShopItems {
+    color: black;
+}
+
+.subShopItems li {
+    cursor: pointer;
 }
 
 .iconsText {
