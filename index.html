@@ -57,8 +57,12 @@
             <div class="navBar">
                 <nav id="navigation" role="navigation">
                     <ul>
-                        <li><a href="#" onmouseover="showMenu('wallpaper')"
-                                onmouseout="hideMenu('wallpaper')">WALLPAPER</a>
+                        <li>
+                            <span class="liSpanNav">
+                                <a href="#" onmouseover="showMenu('wallpaper')"
+                                    onmouseout="hideMenu('wallpaper')">WALLPAPER</a>
+                                <img src="img/arrowDown.png" alt="">
+                            </span>
                             <div id="wallpaper" class="submenu" onmouseover="showMenu('wallpaper')"
                                 onmouseout="hideMenu('wallpaper')">
                                 <ul>
@@ -130,35 +134,108 @@
                                 <img src="img/wpNavImage.png">
                             </div>
                         </li>
-                        <li><a href="#" onmouseover="showMenu('paint')" onmouseout="hideMenu('paint')">PAINT</a>
+                        <li>
+                            <span class="liSpanNav">
+                                <a href="#" onmouseover="showMenu('paint')" onmouseout="hideMenu('paint')">PAINT</a>
+                                <img src="img/arrowDown.png" alt="">
+                            </span>
                             <div id="paint" class="submenu" onmouseover="showMenu('paint')"
                                 onmouseout="hideMenu('paint')">
                                 <ul>
-                                    <li><a href="#">Category 1</a></li>
-                                    <li><a href="#">Category 2</a></li>
-                                    <li><a href="#">Category 3</a></li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Paint By Color</a>
+                                        <ul class="subShopItems">
+                                            <li>Blue</li>
+                                            <li>Green</li>
+                                            <li>Grey</li>
+                                            <li>Neutral</li>
+                                            <li>Pink</li>
+                                            <li>Purple</li>
+                                            <li>White</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Paint By Style</a>
+                                        <ul class="subShopItems">
+                                            <li>Interior Wall</li>
+                                            <li>Bathroom</li>
+                                            <li>Kitchen</li>
+                                            <li>Extior Eggshell</li>
+                                            <li>Garden</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Paint By Brand</a>
+                                        <ul class="subShopItems">
+                                            <li>Next</li>
+                                            <li>Laura Ashley</li>
+                                            <li>Joules</li>
+                                            <li>Superfresco Easy</li>
+                                        </ul>
+                                    </li>
                                 </ul>
+                                <img src="img/paintNavImg.png">
                             </div>
                         </li>
-                        <li><a href="#" onmouseover="showMenu('brands')" onmouseout="hideMenu('brands')">BRANDS</a>
+                        <li>
+                            <span class="liSpanNav">
+                                <a href="#" onmouseover="showMenu('brands')" onmouseout="hideMenu('brands')">BRANDS</a>
+                                <img src="img/arrowDown.png" alt="">
+                            </span>
+
                             <div id="brands" class="submenu" onmouseover="showMenu('brands')"
                                 onmouseout="hideMenu('brands')">
                                 <ul>
-                                    <li><a href="#">Category 1</a></li>
-                                    <li><a href="#">Category 2</a></li>
-                                    <li><a href="#">Category 3</a></li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Brand</a>
+                                        <ul class="subShopItems">
+                                            <li>Envy</li>
+                                            <li>Joules</li>
+                                            <li>Laura Ashley</li>
+                                            <li>Next</li>
+                                            <li>Superfresco Easy Paint</li>
+                                            <li>Superfresco Easy</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
                         <li><a href="#">WALL MURALS</a></li>
-                        <li><a href="#" onmouseover="showMenu('wallArt')" onmouseout="hideMenu('wallArt')">WALL ART</a>
+                        <li>
+                            <span class="liSpanNav">
+                                <a href="#" onmouseover="showMenu('wallArt')" onmouseout="hideMenu('wallArt')">WALL
+                                    ART</a>
+                                <img src="img/arrowDown.png" alt="">
+                            </span>
                             <div id="wallArt" class="submenu" onmouseover="showMenu('wallArt')"
                                 onmouseout="hideMenu('wallArt')">
                                 <ul>
-                                    <li><a href="#">Category 1</a></li>
-                                    <li><a href="#">Category 2</a></li>
-                                    <li><a href="#">Category 3</a></li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Type</a>
+                                        <ul class="subShopItems">
+                                            <li>Canvas Wall Art</li>
+                                            <li>Framed Wall Art</li>
+                                            <li>Clocks</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="shopItemsCategories" href="#">Shop By Color</a>
+                                        <ul class="subShopItems">
+                                            <li>Black</li>
+                                            <li>Blue</li>
+                                            <li>Brown</li>
+                                            <li>Green</li>
+                                            <li>Grey</li>
+                                            <li>Neutral</li>
+                                            <li>Orange</li>
+                                            <li>Pink</li>
+                                            <li>Purple</li>
+                                            <li>Red</li>
+                                            <li>Yellow</li>
+                                        </ul>
+                                    </li>
                                 </ul>
+                                <img src="img/wallArtImg.png">
                             </div>
                         </li>
                         <li><a href="#">SALE</a></li>
@@ -171,7 +248,7 @@
         <div class="belowHeaderDiv">
             <a href="#" class="belowHeaderLink1">
                 <span>
-                    <span class="tickIcon"></span>
+                    <img class="tickIcon" src="img/tickche.png" alt="">
                     <span class="delivery-title">Free Delivery</span>
                 </span>
                 <span class="belowHeaderLink1NotBoldedSpan">On All Orders Over £50</span>
@@ -180,7 +257,7 @@
         <div class="belowHeaderDiv">
             <a href="#" class="belowHeaderLink1">
                 <span>
-                    <span class="tickIcon"></span>
+                    <img class="tickIcon" src="img/tickche.png" alt="">
                     <span class="delivery-title">CustomersRate Us 4.7 / 5</span>
                 </span>
             </a>
@@ -188,7 +265,7 @@
         <div class="belowHeaderDiv">
             <a href="#" class="belowHeaderLink1">
                 <span>
-                    <span class="tickIcon"></span>
+                    <img class="tickIcon" src="img/tickche.png" alt="">
                     <span class="delivery-title">Order by 8pm</span>
                 </span>
                 <span class="belowHeaderLink1NotBoldedSpan">For Next Day Delivery</span>
@@ -212,12 +289,14 @@
         </section>
 
         <div id="controls">
-            <!-- <ul class="sprite">
-                <li class="prevArrow"><a href="#">Prev</a></li>
-                <li class="nextArrow"><a href="#">Next</a></li>
-            </ul> -->
-            <img id="prev" src="#" alt="prev">
-            <img id="next" src="#" alt="next">
+            <div class="ourBrand">Our
+                <span
+            >Brands</span>
+            </div>
+            <div>
+                <img id="prev" src="img/arrowLeft.png" alt="prev">
+                <img id="next" src="img/arrowRight.png" alt="next">
+            </div>
         </div>
         </div>
         <section id="slider">

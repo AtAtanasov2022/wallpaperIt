@@ -23,7 +23,22 @@
     --text-style-letter-spacing: 0.6px;
 }
 
-.sprite {}
+.tickIcon {
+    position: relative;
+    top: 7px;
+    height: 25px;
+    width: 25px;
+}
+
+.liSpanNav {
+    display: flex;
+}
+
+.liSpanNav img {
+    height: 20px;
+    position: relative;
+    top: 15px;
+}
 
 ul.sprite li a {
     background: url("../img/wallpaperit_sprite.png") no-repeat;
@@ -171,7 +186,7 @@ nav a:hover {
 .submenu ul {
     list-style: none;
     display: flex;
-    justify-content:left;
+    justify-content: left;
     flex-wrap: wrap;
 }
 
@@ -205,6 +220,9 @@ nav a:hover {
 }
 
 .subShopItems li {
+    margin-left: 1.5rem;
+    padding: 0;
+    text-align: left;
     cursor: pointer;
 }
 
@@ -215,6 +233,7 @@ nav a:hover {
 
 .belowHeaderDiv {
     width: 25%;
+    height: 40px;
     text-align: center;
 }
 
@@ -309,14 +328,27 @@ nav a:hover {
 }
 
 #controls {
-    margin: 0 auto;
-    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem auto 0rem auto;
+    width: 80%;
     text-align: center;
 }
 
 #controls img {
-    width: 30px;
+    width: 60px;
+    margin-right: 30px;
     cursor: pointer;
+}
+
+.ourBrand {
+    font-size: 30px;
+}
+
+.ourBrand span {
+    font-family: var(--text-style);
+    font-style: italic !important;
+    color: #6ecfb2;
 }
 
 .belowHeaderLink1 {
@@ -424,14 +456,14 @@ nav a:hover {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: stretch;
-  }
-  
-  #belowWelcomeSectionOneImg {
+}
+
+#belowWelcomeSectionOneImg {
     width: 50%;
     height: 100%;
-  }
-  
-  #belowWelcomeSectionOneContent {
+}
+
+#belowWelcomeSectionOneContent {
     width: 50%;
     height: 33.5rem;
     background-color: #567761;
@@ -439,21 +471,21 @@ nav a:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  
-  #belowWelcomeSectionOneContent img {
+}
+
+#belowWelcomeSectionOneContent img {
     width: 150px;
     margin: 60px 0 0 60px;
-  }
-  
-  #belowWelcomeSectionOneContent h1 {
+}
+
+#belowWelcomeSectionOneContent h1 {
     color: white;
     font-size: 130px;
     margin: 2px 60px;
     font-weight: 550;
-  }
-  
-  #belowWelcomeSectionOneContent button {
+}
+
+#belowWelcomeSectionOneContent button {
     background-color: white;
     border: none;
     padding: 10px 20px;
@@ -463,21 +495,21 @@ nav a:hover {
     cursor: pointer;
     margin: 20px 0 0 60px;
     font-family: var(--text-style-1);
-  }
-  
-  #belowWelcomeSectionTwo {
+}
+
+#belowWelcomeSectionTwo {
     display: flex;
     align-items: center;
     justify-content: stretch;
     margin: 40px 0;
     width: 100%;
-  }
-  
-  #belowWelcomeSectionTwoImg1 {
+}
+
+#belowWelcomeSectionTwoImg1 {
     width: 25%;
-  }
-  
-  #belowWelcomeSectionTwoContent {
+}
+
+#belowWelcomeSectionTwoContent {
     width: 50%;
     height: 37.1rem;
     background-color: #192e31;
@@ -485,26 +517,26 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  #belowWelcomeSectionTwoImg2 {
+}
+
+#belowWelcomeSectionTwoImg2 {
     width: 25%;
-  }
-  
-  #belowWelcomeSectionTwoContent h1 {
+}
+
+#belowWelcomeSectionTwoContent h1 {
     color: white;
     font-size: 50px;
     font-weight: 600;
     margin: 20px 60px;
-  }
-  
-  #belowWelcomeSectionTwoContentButtons {
+}
+
+#belowWelcomeSectionTwoContentButtons {
     display: flex;
     justify-content: center;
     width: 50%;
-  }
-  
-  #belowWelcomeSectionTwoContentButtons button {
+}
+
+#belowWelcomeSectionTwoContentButtons button {
     background-color: #ede0d8;
     border: none;
     padding: 15px 20px;
@@ -514,7 +546,7 @@ nav a:hover {
     cursor: pointer;
     margin: 20px;
     font-family: var(--text-style-1);
-  }
+}
 
 footer {
     width: 100%;
