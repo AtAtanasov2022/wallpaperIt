@@ -36,6 +36,22 @@
             --text-style-letter-spacing: 0.6px;
         }
 
+        .sprite {
+            
+        }
+
+        ul.sprite li a {
+            background: url("/img/wallpaperit_sprite.png") no-repeat;
+        }
+
+        ul.sprite li.prevArrow {
+            background-position: 0 50px;
+        }
+
+        ul.sprite li.nextArrow {
+            background-position: 0 -50px;
+        }
+
         #saleBanner {
             width: 100%;
             height: 1.5rem;
@@ -206,6 +222,10 @@
             height: 4rem;
         }
 
+        .mainImgAndButtonSection {
+            display: flex
+        }
+
         .leftImage {
             background-image: url(./img/envy-homepage-banner-left-image.jpg);
             background-size: 560px 560px;
@@ -251,6 +271,51 @@
 
         .envyImg {
             margin-top: 3rem;
+        }
+
+        #slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        #slider ul {
+            position: absolute;
+            list-style: none;
+            margin: 20px 0% 0px 10%;
+            display: flex;
+            padding: 0;
+            width: 80%;
+            /* overflow: hidden; */
+            height: 12rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slider li {
+            width: 16%;
+            height: 10rem;
+            outline: #066A76 2px solid;
+            margin: 0px 15px 0px 0px;
+            vertical-align: middle;
+        }
+
+        #slider img {
+            width: 14.5rem;
+            outline: 1px solid;
+            outline-color: #161615;
+        }
+
+        #controls {
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+        }
+
+        #controls img {
+            width: 30px;
+            cursor: pointer;
         }
 
         /* #magnifyingGlass {
@@ -389,18 +454,45 @@
         </div>
     </div>
     <main class="main">
-        <section style="display: flex">
+        <section class="mainImgAndButtonSection">
             <div class="leftImage"></div>
             </div>
             <div class="sectionMainContent">
-                <img  class="discoverYourStyleImg" src="https://www.wallpaper-it.com/on/demandware.static/-/Library-Sites-Library-Wallpaper/default/dw7b653d08/svg/envy-homepage-banner-sinful-style.svg"
+                <img class="discoverYourStyleImg"
+                    src="https://www.wallpaper-it.com/on/demandware.static/-/Library-Sites-Library-Wallpaper/default/dw7b653d08/svg/envy-homepage-banner-sinful-style.svg"
                     alt="Discover your Sinful Style">
                 <a href="#" class="buttonShopWallpaper" aria-label="Shop Envy Wallpaper">Shop Wallpaper</a>
                 <span>
-                    <img class="envyImg" src="" alt="Envy">
+                    <img class="envyImg" src="./img/envy-homepage-banner-logo.svg" alt="Envy">
                 </span>
             </div>
             <div class="rightImage"></div>
+        </section>
+        <div id="controls">
+            <ul class="sprite">
+                <li class="prevArrow"><a href="#">Prev</a></li>
+                <li class="nextArrow"><a href="#">Next</a></li>
+            </ul>
+            <img id="prev" src="#" alt="prev">
+            <img id="next" src="#" alt="next"></div>
+        </div>
+        <section id="slider">
+            <ul>
+                <li><img src="/img/boutique-logo.png" alt="image1"></li>
+                <li><img src="/img/contour-logo.webp" alt="image2"></li>
+                <li><img src="/img/joules-logo.png" alt="image3"></li>
+                <li><img src="/img/la-logo.png" alt="image4"></li>
+                <li><img src="/img/next-logo.png" alt="image5"></li>
+                <li><img src="/img/sfe-logo.png" alt="image6"></li>
+                <li><img src="/img/sfep-logo.png" alt="image7"></li>
+                <li><img src="/img/boutique-logo.png" alt="image8"></li>
+                <li><img src="/img/contour-logo.webp" alt="image9"></li>
+                <li><img src="/img/joules-logo.png" alt="image10"></li>
+                <li><img src="/img/la-logo.png" alt="image11"></li>
+                <li><img src="/img/next-logo.png" alt="image12"></li>
+                <li><img src="/img/sfe-logo.png" alt="image13"></li>
+                <li><img src="/img/sfep-logo.png" alt="image14"></li>
+            </ul>
         </section>
     </main>
     <footer>
@@ -420,6 +512,43 @@
             var submenu = document.getElementById(id);
             submenu.style.display = "none";
         }
+
+        var slider = document.getElementById("slider");
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var isDown = false;
+        var startX;
+        var scrollLeft;
+
+        prev.addEventListener("click", function () {
+            slider.scrollLeft -= slider.offsetWidth;
+        });
+
+        next.addEventListener("click", function () {
+            slider.scrollLeft += slider.offsetWidth;
+        });
+
+        slider.addEventListener("mousedown", (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener("mouseleave", () => {
+            isDown = false;
+        });
+
+        slider.addEventListener("mouseup", () => {
+            isDown = false;
+        });
+
+        slider.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1;
+            slider.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 
