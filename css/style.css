@@ -162,7 +162,7 @@ nav a:hover {
     transform: translateY(-50%);
     transform: translateX(-2rem);
     background-color: #fff;
-    width: 100%;
+    width: 102%;
     height: 30rem;
     z-index: 1;
     margin-top: 0.1rem;
@@ -400,6 +400,103 @@ nav a:hover {
 #imageEight {
     grid-area: 3 / 4 / 4 / 5;
 }
+
+#belowWelcomeSectionOne {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: stretch;
+  }
+  
+  #belowWelcomeSectionOneImg {
+    width: 50%;
+    height: 100%;
+  }
+  
+  #belowWelcomeSectionOneContent {
+    width: 50%;
+    height: 33.5rem;
+    background-color: #567761;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  #belowWelcomeSectionOneContent img {
+    width: 150px;
+    margin: 60px 0 0 60px;
+  }
+  
+  #belowWelcomeSectionOneContent h1 {
+    color: white;
+    font-size: 130px;
+    margin: 2px 60px;
+    font-weight: 550;
+  }
+  
+  #belowWelcomeSectionOneContent button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100em;
+    width: 220px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0 0 60px;
+    font-family: var(--text-style-1);
+  }
+  
+  #belowWelcomeSectionTwo {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    margin: 40px 0;
+    width: 100%;
+  }
+  
+  #belowWelcomeSectionTwoImg1 {
+    width: 25%;
+  }
+  
+  #belowWelcomeSectionTwoContent {
+    width: 50%;
+    height: 37.1rem;
+    background-color: #192e31;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #belowWelcomeSectionTwoImg2 {
+    width: 25%;
+  }
+  
+  #belowWelcomeSectionTwoContent h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 60px;
+  }
+  
+  #belowWelcomeSectionTwoContentButtons {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  
+  #belowWelcomeSectionTwoContentButtons button {
+    background-color: #ede0d8;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 100em;
+    width: 220px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    font-family: var(--text-style-1);
+  }
 
 footer {
     width: 100%;
