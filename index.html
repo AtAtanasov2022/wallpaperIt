@@ -12,7 +12,386 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Wallpaper it</title>
     <style>
-        
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            /* background-color: rgba(0, 0, 0, 0.05) !important;
+            outline: #000000 1px solid; */
+        }
+
+        :root {
+            --secondary: #066A76;
+            --pale-teal: #7FC6AC;
+            --grey: #EBE3E9;
+            --black: #161615;
+            --dark-green: #1D4435;
+            --text-style-4-letter-spacing: 3px;
+            --text-style-3-letter-spacing: 0.8px;
+            --text-style-2-letter-spacing: 0.4px;
+            --text-style-1: 'Avenir', sans-serif;
+            --text-style: 'DM Serif Display', serif;
+            --text-style-letter-spacing: 0.6px;
+        }
+
+        /* .sprite {} */
+
+        ul.sprite li a {
+            background: url("/img/wallpaperit_sprite.png") no-repeat;
+        }
+
+        ul.sprite li.prevArrow {
+            background-position: 0 50px;
+        }
+
+        ul.sprite li.nextArrow {
+            background-position: 0 -50px;
+        }
+
+        #saleBanner {
+            width: 100%;
+            height: 1.5rem;
+            text-align: center;
+            padding: 0.325rem 0rem;
+            position: relative;
+            background-color: var(--pale-teal);
+            color: var(--black);
+            font-family: var(--text-style-1);
+            letter-spacing: 0.01rem;
+        }
+
+        #closeBtn {
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--black);
+        }
+
+        .topBanner {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 1.5rem 1rem 1.5rem;
+        }
+
+        /* .searchAndNav {
+            
+        } */
+
+        .searchBar form {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .searchBar input[type="search"] {
+            height: 2.7rem;
+            border: var(--pale-teal) thin solid;
+            border-radius: 60px;
+            padding: 0 40px 0 10px;
+            width: 38rem;
+        }
+
+        .searchBar img {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            transform: translateX(35.8rem);
+            cursor: pointer;
+            height: 20px;
+        }
+
+        .iconWrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 15rem;
+            margin-right: 25px;
+        }
+
+        .imgIconsContainers {
+            display: flex;
+            flex-direction: column;
+            max-width: 10rem;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .imgIcons {
+            height: 35px;
+        }
+
+        .navBar {
+            display: flex;
+        }
+
+        nav {
+            width: 100%;
+            background-color: white;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: var(--pale-teal) solid;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            font-family: var(--text-style-1);
+            font-weight: bold;
+            letter-spacing: var(--text-style-4-letter-spacing);
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        nav li {
+            width: 12%;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--black);
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #666;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            transform: translateY(-50%);
+            transform: translateX(-2rem);
+            background-color: #fff;
+            width: 100%;
+            height: 30rem;
+            z-index: 1;
+            margin-top: 0.1rem;
+        }
+
+        .submenu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .submenu li {
+            width: 10rem;
+            text-align: center;
+        }
+
+        .submenu a {
+            color: #333;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+        }
+
+        .submenu a:hover {
+            background-color: #ccc;
+        }
+
+        .iconsText {
+            font-family: AvenirBook;
+            color: black;
+        }
+
+        .belowHeaderDiv {
+            width: 25%;
+            text-align: center;
+        }
+
+        .belowHeaderLinks {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 4rem;
+        }
+
+        .mainImgAndButtonSection {
+            display: flex
+        }
+
+        .leftImage {
+            background-image: url(./img/envy-homepage-banner-left-image.jpg);
+            background-size: 560px 560px;
+            width: 30%;
+            height: 34rem;
+        }
+
+        .rightImage {
+            background-image: url(./img/envy-homepage-banner-right-image.jpg);
+            background-size: 560px 560px;
+            width: 30%;
+            height: 34rem;
+        }
+
+        .sectionMainContent {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: var(--dark-green);
+        }
+
+        .buttonShopWallpaper {
+            background-color: #E4BE8C;
+            color: black;
+            display: inline-block;
+            margin-top: 3rem;
+            font-family: AvenirBook;
+            font-weight: 540;
+            font-size: 1rem;
+            letter-spacing: .078rem;
+            padding: 0.75rem 2.5rem;
+            text-transform: uppercase;
+            border-radius: 1.75rem;
+            -webkit-border-radius: 1.75rem;
+            text-decoration: none;
+        }
+
+        .discoverYourStyleImg {
+            height: 12rem;
+            width: 95%;
+        }
+
+        .envyImg {
+            margin-top: 3rem;
+        }
+
+        #slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        #slider ul {
+            position: absolute;
+            list-style: none;
+            margin: 20px 0% 0px 10%;
+            display: flex;
+            padding: 0;
+            width: 80%;
+            /* overflow: hidden; */
+            height: 12rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slider li {
+            width: 16%;
+            height: 10rem;
+            /* outline: #066A76 2px solid; */
+            margin: 0px 15px 0px 0px;
+            vertical-align: middle;
+        }
+
+        #slider img {
+            width: 14.5rem;
+            /* outline: 1px solid;
+            outline-color: #161615; */
+        }
+
+        #controls {
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+        }
+
+        #controls img {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .belowHeaderLink1 {
+            text-decoration: none;
+            font-family: var(--text-style-1);
+            color: black;
+        }
+
+        .delivery-title {
+            font-weight: bold;
+        }
+
+        #image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 33% 33% 33%;
+            gap: 30px;
+            width: 80%;
+            align-self: center;
+        }
+
+        #image-grid img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #welcome-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 80px;
+        }
+
+        #welcome-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        #welcome-logo h1 {
+            font-size: 36px;
+        }
+
+        #it {
+            color: #7fc6ac;
+            font-style: italic;
+        }
+
+        #welcome-section p {
+            font-size: 18px;
+            text-align: center;
+            width: 60%;
+        }
+
+        #last {
+            margin: 20px;
+        }
+
+        #welcome-section img {
+            width: 60px;
+        }
+
+        /* #magnifyingGlass {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            height: 25px;
+            width: 30px;
+            transform: translateY(-50%);
+            border: none;
+            background: url(./img/wallpaperit_sprite.png) 100 100 no-repeat;
+            background-size: 155px;
+            background-position: 100px 100px;
+        } */
     </style>
 </head>
 
@@ -169,11 +548,10 @@
                 <li class="nextArrow"><a href="#">Next</a></li>
             </ul> -->
             <img id="prev" src="#" alt="prev">
-            <img id="next" src="#" alt="next"></div>
+            <img id="next" src="#" alt="next">
         </div>
-        
+        </div>
         <section id="slider">
-            
             <ul>
                 <li><img src="img/boutique-logo.png" alt="image1"></li>
                 <li><img src="img/contour-logo.webp" alt="image2"></li>
@@ -191,6 +569,33 @@
                 <li><img src="img/sfep-logo.png" alt="image14"></li>
             </ul>
         </section>
+        <section>
+            <div id="image-grid">
+                <img id="one" src="./img/Joules_Sub_Banner.jpg" />
+                <img id="two" src="./img/sfe-paint-hpg.jpg" />
+                <img id="three" src="./img/new_2021.jpg" />
+                <img id="four" src="./img/WPITGrid_WallMurals.jpg" />
+                <img id="five" src="./img/geo_2021.jpg" />
+                <img id="six" src="./img/grey_2021.jpg" />
+                <img id="seven" src="./img/blue_2021.jpg" />
+                <img id="eight" src="./img/kids_2021.jpg" />
+            </div>
+
+            <div id="welcome-section">
+                <div id="welcome-logo">
+                    <h1>Welcome to Wallpaper</h1>
+                    <h1 id="it">it</h1>
+                </div>
+                <p>
+                    Designed in our studio, our fun, bright and affordable wallpapers are an
+                    easy and stress-free way to transform your house into a home. Too good
+                    to be true?
+                </p>
+                <p id="last">Have a little scroll and see for yourself…</p>
+                <img src="./img/wi-fav.webp" />
+            </div>
+        </section>
+
     </main>
     <footer>
 
