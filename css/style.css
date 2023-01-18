@@ -23,9 +23,7 @@
     --text-style-letter-spacing: 0.6px;
 }
 
-.sprite {
-    
-}
+.sprite {}
 
 ul.sprite li a {
     background: url("../img/wallpaperit_sprite.png") no-repeat;
@@ -265,7 +263,7 @@ nav a:hover {
 #slider {
     position: relative;
     width: 80%;
-    margin: auto; 
+    margin: auto;
     height: 10rem;
     overflow: hidden;
     padding: 3rem 0;
@@ -275,7 +273,7 @@ nav a:hover {
     position: absolute;
     list-style: none;
     display: flex;
-    gap: 2rem; 
+    gap: 2rem;
     padding: 0;
     justify-content: center;
     align-items: center;
@@ -303,7 +301,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-.belowHeaderLink1{
+.belowHeaderLink1 {
     text-decoration: none;
     font-family: var(--text-style-1);
     color: black;
@@ -311,6 +309,57 @@ nav a:hover {
 
 .delivery-title {
     font-weight: bold;
+}
+
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 33% 33% 33%;
+    gap: 30px;
+    width: 80%;
+    align-self: center;
+}
+
+#image-grid img {
+    width: 100%;
+    cursor: pointer;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+}
+
+#welcome-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#welcome-logo h1 {
+    font-size: 36px;
+}
+
+#it {
+    color: #7fc6ac;
+    font-style: italic;
+}
+
+#welcome-section p {
+    font-size: 18px;
+    text-align: center;
+    width: 60%;
+}
+
+#last {
+    margin: 20px;
+}
+
+#welcome-section img {
+    width: 60px;
 }
 
 /* #magnifyingGlass {
