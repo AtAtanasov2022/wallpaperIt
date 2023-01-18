@@ -314,14 +314,18 @@ nav a:hover {
 #image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 33% 33% 33%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 2px;
     gap: 30px;
     width: 80%;
+    margin: 0px auto;
     align-self: center;
 }
 
 #image-grid img {
     width: 100%;
+    /* height: 3rem; */
     cursor: pointer;
 }
 
@@ -360,6 +364,40 @@ nav a:hover {
 
 #welcome-section img {
     width: 60px;
+}
+
+#imageOne {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+#imageTwo {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#imageThree {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#imageFour {
+    grid-area: 2 / 3 / 3 / 5;
+    height: 205px;
+    width: 525px;
+}
+
+#imageFive {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#imageSix {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+#imageSeven {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+#imageEight {
+    grid-area: 3 / 4 / 4 / 5;
 }
 
 /* #magnifyingGlass {
